@@ -11,24 +11,19 @@ let splitWord = [];
 let line = document.getElementsByClassName("line")[rowCounter].children;
 
 const startButton = document.querySelector(".start-btn");
-const deleteButton = document.querySelector(".delete-btn")
+const deleteButton = document.querySelector(".delete-btn");
 const enterButton = document.querySelector(".enter-btn");
 const keyboardButtons = document.querySelectorAll(".btn");
 
 startButton.addEventListener("click", wordPick);
 enterButton.addEventListener("click", splitWordCheck);
 deleteButton.addEventListener("click", function () {
-  
   if (blockcounter > 0) {
     blockcounter--;
     line[blockcounter].textContent = "";
-  }
-  
-  else {
+  } else {
     return;
   }
-  console.log("delete: " + blockcounter)
-
 });
 
 function wordPick() {
@@ -37,16 +32,10 @@ function wordPick() {
 }
 
 function splitWordCheck() {
-  if (blockcounter < 5) {
-    alert("Please Enter 5 letter");
-    return;
-  }
-
   if (blockcounter == 5) {
     blockcounter = 0;
     rowCounter++;
   }
-
   blockcounter = 0;
 
   splitChars = chars.split("");
@@ -78,19 +67,18 @@ keyboardButtons.forEach((btn) => {
     if (blockcounter == 5 || trueCounter == 5) {
       return;
     }
-    
+
     if (blockcounter == 4 && rowCounter == 4) {
       return;
     }
-    
+
     let takenIndex = btn.innerHTML;
     takenIndex = takenIndex.toUpperCase();
-    
+
     line = document.getElementsByClassName("line")[rowCounter].children;
-    
+
     line[blockcounter].textContent += takenIndex;
     chars += takenIndex;
     blockcounter++;
-    console.log("add: " + blockcounter)
   });
 });
