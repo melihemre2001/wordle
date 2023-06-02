@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F9D949;
+}
+
+.logo{
+    display: flex;
+    
+    justify-content: center;
+}
+.logo-img{
+    width: 200px;
+    height: 200px;
+}
+
+.instructions{
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+}
+.inst-header{
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 5px;
+    
+}
+.inst-items{
+    width: max-content;
+    margin-top: 40px;
+}
+
+
+.inst-description{
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    width: 200px;
+}
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+  flex-direction: column;
+  
+  
+  
+  
+}
+.board {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  align-items: center;
+  margin: 12px auto;
+  
+}
+.line {
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  background-color: black;
+  color: #F9D949;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border: 3px solid black;
+  display: inline-flex;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.true {
+  background-color: green;
+}
+.false {
+  background-color: gray;
+}
+.change {
+  background-color: orange;
+}
+
+.start-btn {
+  width: 100px;
+  height: 30px;
+  background-color: red;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.start-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;}
+
+.btn {
+  background-color: black;
+  color: #F9D949;
+  border-radius: 50%;
+  margin: 0.3rem;
+  display: inline-block;
+  border: none;
+  font-size: 1.6rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.enter-btn {
+  width: max-content;
+  border-radius: 10%;
+  background-color: green;
+  color: black;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  display: inline-block;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-btn {
+  width: max-content;
+  border-radius: 10%;
+  background-color: red;
+  color: black;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  display: inline-block;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: bold;
+
+}
